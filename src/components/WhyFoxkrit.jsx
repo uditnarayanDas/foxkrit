@@ -53,23 +53,23 @@ const WhyFoxkrit = () => {
   ];
 
   return (
-    <section className="w-full px-6 py-20 scroll-mt-20" id="why-foxkrit">
+    <section className="w-full px-4 sm:px-6 py-10 sm:py-14 scroll-mt-16" id="why-foxkrit">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-10 sm:mb-14"
         >
-          <h2 className="text-5xl md:text-6xl Display text-white mb-4" style={{ fontFamily:"'Space Grotesk', merriweather "}}>
-            Why 
+          <h2 className="text-3xl sm:text-4xl md:text-5xl Display text-white mb-3" style={{ fontFamily: "'Space Grotesk', merriweather " }}>
+            Why
             <span className="text-blue-400 drop-shadow-[0_0_18px_rgba(96,165,250,0.5)]"> Foxkrit?</span>
           </h2>
         </motion.div>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
           {/* Recruiters Card */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -77,18 +77,18 @@ const WhyFoxkrit = () => {
             transition={{ duration: 0.8 }}
             className="group"
           >
-            <div className="relative rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 p-8 md:p-12 h-full overflow-hidden transition-all duration-500 hover:bg-white/15 hover:shadow-[0_15px_40px_rgba(255,255,255,0.1)] hover:border-white/40">
+            <div className="relative rounded-xl sm:rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 p-5 sm:p-6 md:p-8 h-full overflow-hidden transition-all duration-500 hover:bg-white/15 hover:shadow-[0_15px_40px_rgba(255,255,255,0.1)] hover:border-white/40">
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-indigo-500/0 group-hover:from-cyan-500/5 group-hover:via-blue-500/5 group-hover:to-indigo-500/5 transition-all duration-500" />
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-white mb-8" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                   RECRUITERS
                 </h3>
 
                 {/* Points List */}
-                <div className="space-y-6">
+                <div className="space-y-3 sm:space-y-4">
                   {recruiterPoints.map((point, index) => (
                     <motion.div
                       key={index}
@@ -97,13 +97,13 @@ const WhyFoxkrit = () => {
                       transition={{ duration: 0.5, delay: index * 0.05 }}
                       className="group/item"
                     >
-                      <div className="flex gap-3">
-                        <span className="text-blue-400 font-bold text-lg pt-1">•</span>
+                      <div className="flex gap-2">
+                        <span className="text-blue-400 font-bold text-sm pt-0.5">•</span>
                         <div>
-                          <h4 className="text-white font-bold text-sm mb-1 group-hover/item:text-cyan-400 transition-colors">
+                          <h4 className="text-white font-bold text-xs sm:text-sm mb-0.5 group-hover/item:text-cyan-400 transition-colors">
                             {point.title}
                           </h4>
-                          <p className="text-gray-300 text-xs leading-relaxed">
+                          <p className="text-gray-300 text-[10px] sm:text-xs leading-relaxed">
                             {point.description}
                           </p>
                         </div>
@@ -117,9 +117,9 @@ const WhyFoxkrit = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="mt-10 pt-8 border-t border-white/20"
+                  className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/20"
                 >
-                  <p className="text-blue-400 font-bold text-sm">
+                  <p className="text-blue-400 font-bold text-xs sm:text-sm">
                     Quality-first hiring built for speed, clarity, and confidence.
                   </p>
                 </motion.div>
@@ -134,18 +134,18 @@ const WhyFoxkrit = () => {
             transition={{ duration: 0.8 }}
             className="group"
           >
-            <div className="relative rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 p-8 md:p-12 h-full overflow-hidden transition-all duration-500 hover:bg-white/15 hover:shadow-[0_15px_40px_rgba(255,255,255,0.1)] hover:border-white/40">
+            <div className="relative rounded-xl sm:rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 p-5 sm:p-6 md:p-8 h-full overflow-hidden transition-all duration-500 hover:bg-white/15 hover:shadow-[0_15px_40px_rgba(255,255,255,0.1)] hover:border-white/40">
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-indigo-500/0 group-hover:from-cyan-500/5 group-hover:via-blue-500/5 group-hover:to-indigo-500/5 transition-all duration-500" />
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-white mb-8" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                   CANDIDATES
                 </h3>
 
                 {/* Points List */}
-                <div className="space-y-6">
+                <div className="space-y-3 sm:space-y-4">
                   {candidatePoints.map((point, index) => (
                     <motion.div
                       key={index}
@@ -154,13 +154,13 @@ const WhyFoxkrit = () => {
                       transition={{ duration: 0.5, delay: index * 0.05 }}
                       className="group/item"
                     >
-                      <div className="flex gap-3">
-                        <span className="text-blue-400 font-bold text-lg pt-1">•</span>
+                      <div className="flex gap-2">
+                        <span className="text-blue-400 font-bold text-sm pt-0.5">•</span>
                         <div>
-                          <h4 className="text-white font-bold text-sm mb-1 group-hover/item:text-cyan-400 transition-colors">
+                          <h4 className="text-white font-bold text-xs sm:text-sm mb-0.5 group-hover/item:text-cyan-400 transition-colors">
                             {point.title}
                           </h4>
-                          <p className="text-gray-300 text-xs leading-relaxed">
+                          <p className="text-gray-300 text-[10px] sm:text-xs leading-relaxed">
                             {point.description}
                           </p>
                         </div>
@@ -174,9 +174,9 @@ const WhyFoxkrit = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
-                  className="mt-10 pt-8 border-t border-white/20"
+                  className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/20"
                 >
-                  <p className="text-blue-400 font-bold text-sm">
+                  <p className="text-blue-400 font-bold text-xs sm:text-sm">
                     We don't promise jobs—we help you move closer to the right one.
                   </p>
                 </motion.div>

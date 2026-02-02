@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 
 const MAX_SIZE = 2 * 1024 * 1024;
@@ -118,12 +119,12 @@ const TalentNetworkForm = ({ open, onClose }) => {
     "w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-cyan-400";
 
   /* ───────────────── JSX ───────────────── */
-  return (
+  return createPortal(
     <div
-      className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-sm overflow-y-auto"
+      className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm overflow-y-auto"
       onClick={handleClose}
     >
-      <div className="pt-24 pb-10 flex justify-center">
+      <div className="pt-16 sm:pt-20 pb-10 flex justify-center min-h-screen items-start">
         <div
           onClick={(e) => e.stopPropagation()}
           className="relative w-[95%] max-w-xl rounded-2xl
@@ -287,10 +288,9 @@ const TalentNetworkForm = ({ open, onClose }) => {
               type="submit"
               disabled={!formData.resume || fileError || uploadProgress < 100}
               className={`w-full mt-4 py-3 rounded-xl text-white font-medium transition
-                ${
-                  !formData.resume || fileError || uploadProgress < 100
-                    ? "bg-gray-600 cursor-not-allowed"
-                    : "bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500"
+                ${!formData.resume || fileError || uploadProgress < 100
+                  ? "bg-gray-600 cursor-not-allowed"
+                  : "bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500"
                 }
                 shadow-[0_0_30px_rgba(34,211,238,0.35)]`}
             >
@@ -299,7 +299,8 @@ const TalentNetworkForm = ({ open, onClose }) => {
           </form>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 

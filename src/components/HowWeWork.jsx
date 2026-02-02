@@ -35,7 +35,7 @@ const fadeUp = {
 
 export default function HowWeWork() {
   return (
-    <section id="how-we-work" className="w-full px-6 py-20">
+    <section id="how-we-work" className="w-full px-4 sm:px-6 py-10 sm:py-14">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -44,21 +44,21 @@ export default function HowWeWork() {
           viewport={{ once: true }}
           variants={fadeUp}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
             How We{" "}
             <span className="text-blue-400 drop-shadow-[0_0_18px_rgba(96,165,250,0.5)]">
               Work
             </span>
           </h2>
-          <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+          <p className="mt-2 sm:mt-3 text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
             A simple, structured process to ensure quality at every step.
           </p>
         </motion.div>
 
         {/* Steps */}
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-4 sm:gap-6 grid-cols-2 md:grid-cols-4">
           {steps.map((step, index) => (
             <motion.div
               key={step.id}
@@ -71,27 +71,27 @@ export default function HowWeWork() {
               className="group relative"
             >
               {/* Glass Card */}
-              <div className="relative rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 p-6 overflow-hidden transition-all duration-300 hover:bg-white/20 hover:border-white/40 hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]">
+              <div className="relative rounded-xl sm:rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 p-3 sm:p-4 md:p-5 overflow-hidden transition-all duration-300 hover:bg-white/20 hover:border-white/40 hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]">
                 {/* Gradient hover overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-indigo-500/0 group-hover:from-cyan-500/10 group-hover:via-blue-500/10 group-hover:to-indigo-500/10 transition-all duration-300" />
 
                 {/* Content */}
                 <div className="relative z-10 text-center flex flex-col h-full">
                   {/* Step badge */}
-                  <div className="flex justify-center mb-4">
-                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-400 border border-cyan-400/30">
+                  <div className="flex justify-center mb-2 sm:mb-3">
+                    <span className="text-[10px] sm:text-xs font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-cyan-400/10 text-cyan-400 border border-cyan-400/30">
                       Step {step.id}
                     </span>
                   </div>
 
                   {/* Icon */}
-                  <div className="text-4xl mb-4">{step.icon}</div>
+                  <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">{step.icon}</div>
 
                   {/* Text */}
-                  <h3 className="text-lg font-semibold text-white mb-2">
+                  <h3 className="text-sm sm:text-base font-semibold text-white mb-1 sm:mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-gray-300 leading-relaxed">
+                  <p className="text-xs text-gray-300 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -106,7 +106,7 @@ export default function HowWeWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex justify-center mt-20"
+          className="flex justify-center mt-10 sm:mt-14"
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -117,8 +117,8 @@ export default function HowWeWork() {
                 block: "start",
               });
             }}
-            className="group relative px-10 py-4 backdrop-blur-md bg-white/10
-             border border-white/30 text-white font-bold text-lg
+            className="group relative px-6 sm:px-8 py-2.5 sm:py-3 backdrop-blur-md bg-white/10
+             border border-white/30 text-white font-bold text-sm sm:text-base
              rounded-xl overflow-hidden transition-all duration-300
              hover:bg-white/20 hover:border-white/50
              hover:shadow-[0_0_30px_rgba(34,211,238,0.4)]"

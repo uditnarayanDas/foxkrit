@@ -33,19 +33,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-5 left-0 right-0 z-50 mx-4">
-      <div className="container mx-auto flex items-center justify-between py-5 px-4 md:px-12 rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
-        
+    <nav className="fixed top-3 sm:top-4 left-0 right-0 z-50 mx-3 sm:mx-4">
+      <div className="container mx-auto flex items-center justify-between py-2.5 sm:py-3 md:py-3.5 px-3 sm:px-4 md:px-8 lg:px-10 rounded-lg sm:rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
+
         {/* Logo */}
         <div
-          className="text-2xl font-bold cursor-pointer text-white hover:text-gray-300 transition"
+          className="text-lg sm:text-xl md:text-xl font-bold cursor-pointer text-white hover:text-gray-300 transition"
           onClick={() => handleScroll("Hero")}
         >
           FOXKRIT
         </div>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex gap-x-8 uppercase font-medium">
+        <ul className="hidden md:flex gap-x-4 lg:gap-x-6 uppercase font-medium text-sm">
           {links.map((link) => (
             <li
               key={link}
@@ -67,7 +67,7 @@ const Navbar = () => {
             {menuOpen ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
+                className="h-6 w-6 sm:h-7 sm:w-7"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -82,7 +82,7 @@ const Navbar = () => {
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
+                className="h-6 w-6 sm:h-7 sm:w-7"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

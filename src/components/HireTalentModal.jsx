@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const HireTalentModal = ({ open, onClose }) => {
@@ -64,17 +65,17 @@ const HireTalentModal = ({ open, onClose }) => {
   if (!open) return null;
 
   /* ───────────── JSX ───────────── */
-  return (
+  return createPortal(
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-sm overflow-y-auto"
+        className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm overflow-y-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={handleClose}
       >
         {/* Offset from navbar */}
-        <div className="pt-24 pb-10 flex justify-center">
+        <div className="pt-16 sm:pt-20 pb-10 flex justify-center min-h-screen items-start">
           <motion.div
             initial={{ scale: 0.96, y: 20 }}
             animate={{ scale: 1, y: 0 }}
@@ -223,7 +224,8 @@ const HireTalentModal = ({ open, onClose }) => {
           </motion.div>
         </div>
       </motion.div>
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 };
 
